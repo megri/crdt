@@ -7,6 +7,12 @@ lazy val root = project
     version := "0.1.0",
 
     scalaVersion := dottyVersion,
+    scalacOptions ++= Seq(
+      "-deprecation",
+      "-encoding", "UTF-8",
+      "-feature",
+      "-unchecked",
+    ),
 
     libraryDependencies ++= Seq(
       "ch.epfl.lamp" %% "dotty-staging" % scalaVersion.value,
